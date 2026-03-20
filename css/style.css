@@ -1,0 +1,72 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+}
+
+.hero-section {
+    background: linear-gradient(
+            120deg,
+            #c7eaff,
+            #ffffff,
+            #b2f0e6
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    min-height: 100vh; /* ocupa toda la altura de la pantalla */
+    display: flex;
+    align-items: center; /* centra vertical */
+    justify-content: center; /* centra horizontal */
+    padding: 2rem;
+    min-height: calc(100dvh - 58px);
+}
+
+[data-bs-theme="dark"] .hero-section {
+    background: linear-gradient(
+            120deg,
+            #0f172a,
+            #1e293b,
+            #1f2937,
+            #0f172a
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+}
+[data-bs-theme="dark"] .hero-section h1,
+[data-bs-theme="dark"] .hero-section h2 {
+    color: #f1f5f9;
+}
+
+.media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap; /* importante para móvil */
+}
+
+.social{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
