@@ -15,20 +15,17 @@
 
     <script>
         (function(){
-            emailjs.init("qE-5ofUOVX3A8_h_p"); // te lo da EmailJS
+            emailjs.init("qE-5ofUOVX3A8_h_p"); //public key de emailJS
         })();
     </script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
-<!-- NAVBAR + Offcanvas + Dropdown -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#top">mingyi zheng</a>
-        <button class="btn btn-outline-secondary d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-            <i class="bi-list"></i>
         </button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
                 aria-controls="navMain" aria-expanded="false">
@@ -41,16 +38,11 @@
             <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
                 <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
                 <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonios</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                <li class="nav-item dropdown ms-2">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Más</a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#skills">Habilidades</a></li>
-                        <li><a class="dropdown-item" href="#faq">FAQ</a></li>
-                    </ul>
-                </li>
+
             </ul>
             <button id="dark_mode_btn" class="btn btn-outline-dark ms-3" title="Alternar modo oscuro"><i
                     class="bi-moon"></i></button>
@@ -58,20 +50,6 @@
     </div>
 </nav>
 
-<!-- Offcanvas (mobile) -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class="list-unstyled">
-            <li><a class="d-block py-2" href="#about" data-bs-dismiss="offcanvas">Sobre mí</a></li>
-            <li><a class="d-block py-2" href="#projects" data-bs-dismiss="offcanvas">Proyectos</a></li>
-            <li><a class="d-block py-2" href="#contact" data-bs-dismiss="offcanvas">Contacto</a></li>
-        </ul>
-    </div>
-</div>
 
 <header class="py-5 bg-body hero-section">
     <div class="container position-relative">
@@ -80,11 +58,11 @@
             <div class="col-lg-8">
 
                 <h1 class="display-3 fw-bold mb-2">
-                    Hello! <i class="bi bi-globe-asia-australia"></i>
+                    Hello! <i class="bi bi-mortarboard-fill"></i>
                 </h1>
 
                 <h1 class="display-3 fw-bold mb-2">
-                    I'm Mingyi Zheng
+                    I'm Mingyin Zheng
                 </h1>
 
                 <h2 class="h3 text-muted mb-4">
@@ -94,7 +72,7 @@
 
             </div>
         </div>
-f
+
         <div class="social">
             <a href="https://www.linkedin.com/in/minyyi-zheng/"
                target="_blank"
@@ -102,7 +80,7 @@ f
                 <i class="bi bi-linkedin"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/minyyi-zheng-3b0bb729a/"
+            <a href="https://github.com/zethaaa?tab=repositories"
                target="_blank"
                aria-label="GitHub">
                 <i class="bi bi-github"></i>
@@ -112,12 +90,16 @@ f
 
         <div class="media">
 
-            <a href="#projects" class="btn btn-primary">
-                My projects
+            <a href="#projects" class="btn btn-glass">
+                My Projects
             </a>
 
-            <a href="#contact" class="btn btn-outline-primary">
-                Email me
+            <a href="#contact" class="btn btn-outline-glass">
+                Email Me
+            </a>
+
+            <a href="pdf/CV__MingYiZheng.pdf" download class="btn btn-cv">
+                <i class="bi bi-download"></i> Download CV
             </a>
 
         </div>
@@ -129,67 +111,151 @@ f
 <section id="about" class="py-5">
     <div class="container">
 
-        <h2 class="h3 mb-3">Sobre mí </h2>
-        <div class="row">
-            <div class="col-sm-5">
-                <img src="img/1767309495591.jpg" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="col-md-7">
-                <p>Soy alumno de 4º curso de Ingeniería Informática con interés en desarrollo software, ciencia de datos
-                    e inteligencia artificial. He trabajado en pequeñas aplicaciones cliente-servidor, desarrollo
-                    front-end con Bootstrap, desarrollo de sistema con java, análisis de datos con R y Python. </p>
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Cursos relevantes
-                        <span class="badge bg-primary rounded-pill">Interfaces web</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Idiomas
-                        <span class="badge bg-secondary rounded-pill">Español, Inglés B2, Chino</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Trabajo
-                        <span class="badge bg-success">
-                Disponible para prácticas
-             </span>
-                    </li>
-                </ul>
+        <h2 class="h1 mb-5 text-center fw-bold">About Me</h2>
+
+        <div class="row align-items-center g-5">
+
+            <!-- FOTO -->
+            <div class="col-md-6 text-center">
+                <img src="img/1767309495591.jpg"
+                     class="img-fluid rounded-4 shadow about-img"
+                     alt="Profile image">
             </div>
 
-
+            <!-- TEXTO -->
             <div class="col-md-6">
-                <h3 class="h5">Habilidades</h3>
-                <div class="mb-2">
-                    <span class="badge bg-dark me-1 mb-1">HTML</span>
-                    <span class="badge bg-dark me-1 mb-1">CSS</span>
-                    <span class="badge bg-dark me-1 mb-1">JavaScript</span>
-                    <span class="badge bg-dark me-1 mb-1">Java</span>
-                    <span class="badge bg-dark me-1 mb-1">C</span>
-                    <span class="badge bg-dark me-1 mb-1">Python</span>
-                    <span class="badge bg-dark me-1 mb-1">Sql</span>
-                    <span class="badge bg-dark me-1 mb-1">Bootstrap</span>
-                    <span class="badge bg-dark me-1 mb-1">Git</span>
+
+                <p class="lead">
+                    I am a <strong>Junior Computer Science student</strong> with a strong interest in
+                    <span class="text-primary">Software Development</span>,
+                    <span class="text-primary">Data Science</span>, and
+                    <span class="text-primary">Artificial Intelligence</span>.
+                </p>
+
+                <p class="text-muted">
+                    My experience includes building client-server applications, front-end development using Bootstrap,
+                    and system development with Java. I also have hands-on experience in data analysis using R and Python.
+                </p>
+
+                <p class="text-muted">
+                    Beyond my formal education, I am a proactive self-learner, constantly exploring emerging technologies
+                    to stay at the forefront of the industry.
+                </p>
+
+                <!-- INFO CARDS -->
+                <div class="row mt-4 g-3">
+
+                    <div class="col-sm-4">
+                        <div class="about-card text-center">
+                            <h6>Courses Now</h6>
+                            <span class="badge bg-primary">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="about-card text-center">
+                            <h6>Languages</h6>
+                            <span class="badge bg-secondary">ES · ENGLISH · CHINESE</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="about-card text-center">
+                            <h6>Status</h6>
+                            <span class="badge bg-success">Available</span>
+                        </div>
+                    </div>
+
                 </div>
-                <a class="btn btn-outline-secondary btn-sm" href="pdf/memoria.pdf" target="_blank">Descargar
-                    memoria (ejemplo)</a>
+
             </div>
         </div>
+
     </div>
 </section>
 
+<section id="skills" class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <h2 class="h1 mb-3">My Stacks </h2>
+
+            <!-- Technologies -->
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card border-orange">
+                    <h5>Technologies</h5>
+                    <ul>
+                        <li><i class="bi bi-filetype-js"></i> JavaScript</li>
+                        <li><i class="bi bi-filetype-tsx"></i> TypeScript</li>
+                        <li><i class="bi bi-filetype-html"></i> HTML</li>
+                        <li><i class="bi bi-filetype-css"></i> CSS</li>
+                        <li><i class="bi bi-filetype-java"></i> Java</li>
+                        <li><i class="bi bi-gem"></i> C</li>
+                        <li><i class="bi bi-gem"></i> Python</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card border-green">
+                    <h5>Libraries & Frameworks</h5>
+                    <ul>
+                        <li>🎨 Bootstrap</li>
+                        <li>🟢 Vue.js</li>
+                        <li>☕ Struts2</li>
+                        <li>🧠 TensorFlow</li>
+                        <li>🔥 PyTorch</li>
+                        <li>🐼 Pandas</li>
+                        <li>🔢 NumPy</li>
+                        <li>🥒 Cucumber</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card border-yellow">
+                    <h5>Tools</h5>
+                    <ul>
+                        <li><i class="bi bi-git"></i> Git</li>
+                        <li>☁ AWS</li>
+                        <li>🐳 Docker</li>
+                        <li>🌍 Netlify</li>
+                        <li>🎨 Figma</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="col-md-6 col-lg-3">
+                <div class="skill-card border-darkgreen">
+                    <h5>Database</h5>
+                    <ul>
+                        <li>🔗 MySql</li>
+                        <li>🐘 PostgreSQL</li>
+                        <li>🍃 MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <!-- PROJECTS (cards + modal for details) -->
 <section id="projects" class="py-5 bg-body">
     <div class="container">
-        <h2 class="h3 mb-4">Proyectos destacados</h2>
+        <h2 class="h1 mb-4">Proyectos destacados</h2>
         <div class="row g-4">
             <!-- card 1 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="assets/img/project1.jpg" class="card-img-top" alt="Screenshot proyecto 1">
+                    <img src="img/so.jpg" class="card-img-top" alt="Screenshot proyecto 1">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">App de visualización de datos</h5>
-                        <p class="card-text text-muted">Dashboard interactivo que muestra series temporales con filtros
-                            y accesibilidad keyboard-first.</p>
+                        <h5 class="card-title">Mini Os</h5>
+                        <p class="card-text text-muted">Mini OS hecho con ensamblador y c, una funcionalida que tiene es que
+                            imprime variables vr que le asigna el usuario.</p>
                         <div class="mt-auto">
                             <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal"
                                     data-title="App de visualización de datos" data-img="assets/img/project1.jpg"
@@ -207,7 +273,7 @@ f
                 <div class="card h-100">
                     <img src="assets/img/project2.jpg" class="card-img-top" alt="Screenshot proyecto 2">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Web responsive de e-commerce (UI)</h5>
+                        <h5 class="card-title">Testing en JUnit de un mini juego</h5>
                         <p class="card-text text-muted">Maquetación con grid y componentes de compra simulada (sin
                             backend).</p>
                         <div class="mt-auto">
@@ -293,41 +359,9 @@ f
     </div>
 </section>
 
-<!-- TESTIMONIALS (carousel) -->
-<section id="testimonials" class="py-5 bg-body">
-    <div class="container">
-        <h2 class="h3 mb-4">Testimonios</h2>
-        <div id="testCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <blockquote class="blockquote text-center">
-                        <p class="mb-2">"Pablo entregó la práctica a tiempo y con detalles de accesibilidad muy
-                            cuidados."</p>
-                        <footer class="blockquote-footer">Profesor de Interfaces</footer>
-                    </blockquote>
-                </div>
-                <div class="carousel-item">
-                    <blockquote class="blockquote text-center">
-                        <p class="mb-2">"Buena capacidad para transformar requisitos en UI limpias y funcionales."</p>
-                        <footer class="blockquote-footer">Compañero de proyecto</footer>
-                    </blockquote>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-    </div>
-</section>
-
 <section id="contact" class="py-5">
     <div class="container">
-        <h2 class="h3 mb-3">Contacto</h2>
+        <h2 class="h1 mb-3">Contacto</h2>
 
         <form id="contactForm" class="row g-3 needs-validation" novalidate>
 
@@ -358,21 +392,6 @@ f
                 <div id="formStatus"></div>
             </div>
         </form>
-    </div>
-</section>
-
-<!-- FAQ (list group) -->
-<section id="faq" class="py-5 bg-body">
-    <div class="container">
-        <h2 class="h3 mb-3">Preguntas frecuentes</h2>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <strong>¿Aceptas trabajos freelance?</strong><br> Sí, proyectos pequeños o prácticas.
-            </li>
-            <li class="list-group-item">
-                <strong>¿Qué tecnologías manejas?</strong><br> HTML, CSS, JS, Bootstrap y Git.
-            </li>
-        </ul>
     </div>
 </section>
 
