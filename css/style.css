@@ -5,11 +5,64 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+    overflow-x: hidden; /* evita scroll horizontal */
+}
+
 button, .btn {
     transition: all 0.25s ease-in-out;
     font-family: 'Inter', sans-serif;
     color: #191f27;
     letter-spacing: 0.5px;
+}
+
+/* =========================
+   🔹 AJUSTES PARA MÓVILES
+========================= */
+@media (max-width: 576px) {
+
+    /* Padding general de secciones */
+    .hero-section,
+    #contact,
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Botones responsivos */
+    .btn-glass,
+    .btn-outline-glass,
+    .btn-cv,
+    #contact .btn-primary,
+    #contact .btn-outline-secondary {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+        white-space: normal;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Social & Media */
+    .media a,
+    .social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    /* Skill cards */
+    .skill-card {
+        padding: 15px;
+    }
+
+    /* Formulario contacto */
+    #contact .form-control {
+        padding: 0.5rem 0.75rem;
+    }
+
+    #contact {
+        padding: 2rem 1rem;
+    }
 }
 
 /* =========================
@@ -19,7 +72,6 @@ button, .btn {
     background: linear-gradient(120deg, #c7eaff, #ffffff, #b2f0e6);
     background-size: 300% 300%;
     animation: gradientMove 10s ease infinite;
-
     min-height: calc(100dvh - 58px);
     display: flex;
     align-items: center;
@@ -95,7 +147,6 @@ button, .btn {
     transform: translateY(-3px);
 }
 
-/* Botón CV */
 .btn-cv {
     background: linear-gradient(135deg, #0ea5e9, #6366f1);
     color: white;
@@ -114,12 +165,7 @@ button, .btn {
     left: -75%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-            120deg,
-            transparent,
-            rgba(255,255,255,0.6),
-            transparent
-    );
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
     transform: skewX(-25deg);
 }
 
@@ -136,7 +182,7 @@ button, .btn {
    🔹 SKILLS
 ========================= */
 .skill-card {
-    background: var(--card-bg);
+    background: var(#ffffff);
     padding: 25px;
     border-radius: 15px;
     height: 100%;
@@ -162,7 +208,7 @@ button, .btn {
     gap: 10px;
 }
 
-/* Bordes */
+/* Bordes de skills */
 .border-orange { border-color: #ff7a18; }
 .border-green { border-color: #4caf50; }
 .border-yellow { border-color: #ffc107; }
@@ -273,13 +319,14 @@ button, .btn {
     background: rgba(255,255,255,0.05);
     color: #f1f5f9;
 }
+
 [data-bs-theme="dark"] #contact h2 {
-    color: #f1f5f9; /* texto claro para que sea visible */
+    color: #f1f5f9;
 }
 
 [data-bs-theme="dark"] .btn-outline-secondary {
-    color: #e2e8f0; /* texto claro */
-    border-color: #94a3b8; /* borde visible */
+    color: #e2e8f0;
+    border-color: #94a3b8;
 }
 
 [data-bs-theme="dark"] .btn-outline-secondary:hover {
@@ -288,9 +335,6 @@ button, .btn {
     border-color: #cbd5f5;
 }
 
-/* =========================
-   🎬 ANIMACIONES
-========================= */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -298,9 +342,7 @@ button, .btn {
 }
 
 @keyframes shine {
-    100% {
-        left: 125%;
-    }
+    100% { left: 125%; }
 }
 
 /* =========================
@@ -313,4 +355,32 @@ button, .btn {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 576px) {
+    /* Contenedor de botones: que puedan envolver */
+    .media {
+        flex-direction: column;  /* apila botones */
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Botones en columna, centrados y ajustando tamaño */
+    .media .btn,
+    .social .btn {
+        width: 100%;         /* ocupan todo el ancho disponible */
+        max-width: 300px;    /* opcional: no demasiado ancho */
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        white-space: normal; /* permite wrap del texto */
+        text-align: center;
+    }
+
+    /* Ajuste del botón CV para que no desaparezca */
+    .btn-cv {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
 }
