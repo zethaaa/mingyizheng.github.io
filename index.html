@@ -11,12 +11,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
+    <!-- HTML: reemplaza tu viejo EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        (function(){
-            emailjs.init("qE-5ofUOVX3A8_h_p"); //public key de emailJS
-        })();
+        emailjs.init("qE-5ofUOVX3A8_h_p");
     </script>
 
     <link rel="stylesheet" href="./css/style.css">
@@ -26,7 +24,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#top">mingyi zheng</a>
-        </button>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
                 aria-controls="navMain" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
@@ -34,14 +32,12 @@
 
         <div class="collapse navbar-collapse" id="navMain">
 
-
             <ul class="navbar-nav ms-auto align-items-lg-center">
-                <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 
             </ul>
             <button id="dark_mode_btn" class="btn btn-outline-dark ms-3" title="Alternar modo oscuro"><i
@@ -86,7 +82,7 @@
                 <i class="bi bi-github"></i>
             </a>
 
-            </div>
+        </div>
 
         <div class="media">
 
@@ -98,7 +94,7 @@
                 Email Me
             </a>
 
-            <a href="pdf/CV__MingYiZheng.pdf" download class="btn btn-cv">
+            <a href="./pdf/CV__MingYiZheng.pdf" download class="btn btn-cv">
                 <i class="bi bi-download"></i> Download CV
             </a>
 
@@ -107,7 +103,7 @@
     </div>
 </header>
 
-<!-- ABOUT / SKILLS (list-group + badges) -->
+<!-- ABOUT -->
 <section id="about" class="py-5">
     <div class="container">
 
@@ -134,11 +130,13 @@
 
                 <p class="text-muted">
                     My experience includes building client-server applications, front-end development using Bootstrap,
-                    and system development with Java. I also have hands-on experience in data analysis using R and Python.
+                    and system development with Java. I also have hands-on experience in data analysis using R and
+                    Python.
                 </p>
 
                 <p class="text-muted">
-                    Beyond my formal education, I am a proactive self-learner, constantly exploring emerging technologies
+                    Beyond my formal education, I am a proactive self-learner, constantly exploring emerging
+                    technologies
                     to stay at the forefront of the industry.
                 </p>
 
@@ -246,23 +244,22 @@
 <!-- PROJECTS (cards + modal for details) -->
 <section id="projects" class="py-5 bg-body">
     <div class="container">
-        <h2 class="h1 mb-4">Proyectos destacados</h2>
+        <h2 class="h1 mb-4">Project</h2>
         <div class="row g-4">
             <!-- card 1 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="img/so.jpg" class="card-img-top" alt="Screenshot proyecto 1">
+                    <img src="img/so.jpg" class="card-img-top project-img" alt="Screenshot proyecto 1">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Mini Os</h5>
-                        <p class="card-text text-muted">Mini OS hecho con ensamblador y c, una funcionalida que tiene es que
-                            imprime variables vr que le asigna el usuario.</p>
+                        <p class="card-text text-muted">Mini OS developed in Assembly and C; one of its
+                            features is printing user-assigned variables.</p>
                         <div class="mt-auto">
-                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal"
-                                    data-title="App de visualización de datos" data-img="assets/img/project1.jpg"
-                                    data-desc="Proyecto universitario: dashboard con gráficos y filtros.">Ver detalles
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalMiniOs">
+                                Details
                             </button>
                             <a class="btn btn-outline-secondary btn-sm ms-2"
-                               href="https://github.com/tuusuario/proyecto1" target="_blank" rel="noopener">Código</a>
+                               href="https://github.com/zethaaa" target="_blank" rel="noopener">Código</a>
                         </div>
                     </div>
                 </div>
@@ -271,32 +268,18 @@
             <!-- card 2 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="assets/img/project2.jpg" class="card-img-top" alt="Screenshot proyecto 2">
+                    <img src="./img/junit_logo_-blue_background.png" class="card-img-top project-img"
+                         alt="Screenshot proyecto 2">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Testing en JUnit de un mini juego</h5>
-                        <p class="card-text text-muted">Maquetación con grid y componentes de compra simulada (sin
-                            backend).</p>
+                        <h5 class="card-title">Testing in Junit</h5>
+                        <p class="card-text text-muted"> Game testing involving black-box, white-box, system, and
+                            integration testing.</p>
                         <div class="mt-auto">
-                            <a class="btn btn-sm btn-primary" href="#" role="button">Demo</a>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalJUnit">
+                                Details
+                            </button>
                             <a class="btn btn-outline-secondary btn-sm ms-2"
-                               href="https://github.com/tuusuario/proyecto2" target="_blank" rel="noopener">Código</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card placeholder -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="assets/img/project3.jpg" class="card-img-top" alt="Screenshot proyecto 3">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Mini red social académica</h5>
-                        <p class="card-text text-muted">Prototipo UI para compartir recursos y enlaces entre
-                            estudiantes.</p>
-                        <div class="mt-auto">
-                            <a class="btn btn-sm btn-primary" href="#">Demo</a>
-                            <a class="btn btn-outline-secondary btn-sm ms-2"
-                               href="https://github.com/tuusuario/proyecto3" target="_blank" rel="noopener">Código</a>
+                               href="https://github.com/zethaaa" target="_blank" rel="noopener">Código</a>
                         </div>
                     </div>
                 </div>
@@ -307,21 +290,66 @@
 </section>
 
 <!-- Modal (Project details) -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="modalMiniOs" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
+
             <div class="modal-header">
-                <h5 class="modal-title">Detalle proyecto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                <h5 class="modal-title">Mini OS</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
             </div>
+
             <div class="modal-body">
-                <img id="modalImg" src="" alt="" class="img-fluid mb-3">
-                <p id="modalDesc"></p>
+
+                <img src="./img/minios.png" class="img-fluid mb-3 rounded">
+
+                <p>
+                    Al introducir <strong>help</strong>, aparece una lista de comandos disponibles.
+                </p>
+
             </div>
+
             <div class="modal-footer">
-                <a id="modalCode" class="btn btn-outline-secondary" href="#" target="_blank">Código en GitHub</a>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://github.com/zethaaa"
+                   class="btn btn-outline-secondary"
+                   target="_blank">GitHub</a>
+
+                <button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
             </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modalJUnit" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">JUnit Testing</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <img src="./img/Testing1.png" class="img-fluid mb-3 rounded">
+                <img src="./img/vista_testing.png" class="img-fluid mb-3 rounded">
+
+                <p>
+                    Juego de naves vs aliens con testing de caja negra, blanca e integración.
+                </p>
+
+            </div>
+
+            <div class="modal-footer">
+                <a href="https://github.com/zethaaa"
+                   class="btn btn-outline-secondary"
+                   target="_blank">GitHub</a>
+
+                <button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+
         </div>
     </div>
 </div>
@@ -329,17 +357,26 @@
 <!-- EXPERIENCE / ACCORDION -->
 <section id="experience" class="py-5">
     <div class="container">
-        <h2 class="h3 mb-3">Experiencia académica</h2>
+        <h2 class="h1 mb-3">Academic Experiences</h2>
         <div class="accordion" id="expAccordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne">Proyectos universitarios
+                            data-bs-target="#collapseOne">Other Projects
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
                     <div class="accordion-body">
-                        Desarrollo de aplicaciones cliente-servidor en C y prácticas de laboratorio en Tomcat y MySQL.
+                        Development of client-server applications using C, alongside hands-on laboratory experience with
+                        Apache Tomcat
+                        and MySQL database management.
+                    </div>
+                    <div class="accordion-body">
+                        Statistical analysis of medical datasets using R for healthcare insights and data visualization.
+                    </div>
+
+                    <div class="accordion-body">
+                        Development of a custom command-line shell interface using C.
                     </div>
                 </div>
             </div>
@@ -398,7 +435,7 @@
 <!-- FOOTER -->
 <footer class="py-4 bg-dark text-white">
     <div class="container d-flex justify-content-between align-items-center">
-        <small>© <span id="year"></span> Mingyi Z. — Portfolio académico</small>
+        <small>© <span id="year"></span> Mingyi Z. — Portfolio</small>
         <div>
             <a class="text-white me-3" href="#" aria-label="GitHub"><i class="bi-github"></i></a>
             <a class="text-white me-3" href="#" aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
